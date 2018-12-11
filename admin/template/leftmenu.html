@@ -1,0 +1,15 @@
+<!-- 左侧菜单栏 -->
+<ul class="bodys-inner-ul">
+<?php if( !empty( $menu ) ){?>
+	<?php foreach( $menu as $k => $v ){ ?>
+		<li>
+			<a href="<?php echo $v['link'];?>"  <?php echo $idMenu['id']==$v['ind']?'class="li-a-action"':'';?> >
+				<span><img src="<?php echo apth_url(THEME.'/images/'.$v['icon'].'_'.($idMenu['id']==$v['ind']?'2':'1').'.svg');?>" width="25" height="25"/></span>
+				<font ind="<?php echo $v['ind'];?>"><?php echo $v['title'];?></font>
+			</a>
+		</li>
+	<?php } ?>	
+<?php }else{ ?>
+		<li>请在 “menu.php” 自定义您的菜单栏</li>
+<?php } ?>		
+</ul>

@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+*{
+	margin:0;
+	padding:0;
+	font-family: "微软雅黑", Geneva, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+img{
+	border:none;
+	vertical-align:middle;
+}
+a{
+	text-decoration:none;
+	color:#000000;
+}
+ol,li{
+	list-style-type:none;
+}
+.clear:after{
+	height:0;
+	content:".";
+	display:block;
+	visibility:hidden; 
+	clear:both; 
+	
+}
+.clear{
+	zoom:1;
+	clear:both;
+}

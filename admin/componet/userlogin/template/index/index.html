@@ -1,0 +1,67 @@
+<!-- 加载CSS文件 -->
+<link href="./admin/componet/userlogin/template/index/index.css" rel="stylesheet" type="text/css">
+
+<!-- 内容模板 -->
+<div class="body-block">
+	<h1 class="body-block-h">用户注册</h1>
+	<div class="body-box">
+		<div class="body-box-h"> 注册帐号 －〉提交信息 －〉完成</div>
+		<div class="body-block-box clear">
+			<div class="body-inner1">
+				<div class="body-inner1-t">每个邮箱、手机号码只能注册一个帐号</div>
+				<form class="frm">
+					<table class="body-inner1-tab">
+						<tr>
+							<td class="body-inner1-tab1">帐号</td>
+							<td>
+								<input type="text" name="username" placeholder="邮箱 / 手机号码" class="body-inner1-tinp"/>
+								<p class="frm_txt"></p>
+							</td>
+						</tr>
+						<tr>
+							<td class="body-inner1-tab1">密码</td>
+							<td>
+								<input type="password" name="password1"  class="body-inner1-tinp"/>
+								<p class="frm_txt"></p>
+							</td>
+						</tr>
+						<tr>
+							<td class="body-inner1-tab1">确认密码</td>
+							<td>
+								<input type="password" name="password2"  class="body-inner1-tinp"/>
+								<p class="frm_txt"></p>
+							</td>
+						</tr>
+						<tr>
+							<td class="body-inner1-tab1">验证码</td>
+							<td>
+								<input type="text" name="code"  class="body-inner1-flys"/>
+								<img src="<?php echo apth_url('system/virify.php');?>"  data-src="<?php echo apth_url('system/virify.php');?>" class="body-inner1-img"/>
+								<a href="javascript:void(0);" class="ChangeNne">换一张</a>
+								<p class="frm_txt"></p>
+							</td>
+						</tr>
+						<tr>
+							<td class="body-inner1-tab2" colspan="2">
+								<button class="body-inner1-btn">注册</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="body-inner2">
+				<div class="body-inner2-inner">已注册过帐号？<a href="<?php echo apth_url('logIn');?>">立即登录</a></div>
+			</div>
+		</div>
+	</div>
+	<div class="fl clear">
+		<ul class="link clear">
+			<li class="link-f1"><a href="#">关于我们</a></li>
+			<li><a href="#">服务协议</a></li>
+		</ul>
+		<div class="flver">Copyright © 2012-2018 Applet. All Rights Reserved.</div>
+	</div>
+</div>
+
+<!-- 加载JS文件 -->
+<script src="./admin/componet/userlogin/template/index/index.js"></script>

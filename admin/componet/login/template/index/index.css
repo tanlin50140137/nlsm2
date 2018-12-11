@@ -1,0 +1,160 @@
+/* index.html-CSS文件 */
+@CHARSET "UTF-8";
+.body-block{
+ 	margin:0;
+ 	height: 38.37rem;
+ 	background:url('../../../../componet/login/images/wxbd.png') no-repeat;
+ 	background-position: 50% 0;
+ 	position: relative;
+ 	background-size: 100% ;
+}
+.body-logo-t{
+	border:1px solid #eae9e9;
+	width:80rem;
+	margin:2rem auto;
+	padding:1rem;
+	font-size:1.2rem;
+	border-radius: 0.2rem;
+	font-weight: 200;
+}
+.body-logo-t a{
+	font-size:1.2rem;
+}
+.body-logo-t a:hover{
+	font-size:1.2rem;
+	color:#0000FF;
+	text-decoration: underline;
+}
+.body-logo-h{
+	width:80rem;
+	margin:2rem auto;
+	padding:1rem;
+	font-size:1.2rem;
+	color:#6b6969;
+	font-weight: 200;
+}
+.fl{
+	border-top:1px solid #E4E8EB;
+	width:80rem;
+	margin:0 auto 2rem auto;
+	padding:1rem 0;
+	color: #9A9A9A;
+}
+.link{
+	width:80rem;
+	margin:0 auto;
+}
+.link li{
+	border-left:1px solid #aba9a9;
+	float:left;
+	height:1.1rem;
+	text-align:center;
+	line-height:1.1rem;
+	padding:0 1.4rem;
+	margin-bottom:1rem;
+}
+.link li a{
+	color: #9A9A9A;
+	display:block;
+	font-size:1.2rem;
+}
+.link li a:hover{
+	text-decoration: underline;
+}
+.link .link-f1{
+	text-align:left;
+	padding:0 1.4rem 0 0;
+	border:none;
+}
+.login-block{
+	position: absolute;
+    top: 5.2rem;
+    right: 15%;
+    width: 30rem;
+    height: 20rem;
+    background: #FFFFFF;
+    border-radius: 0.3rem;
+    padding:4rem;
+}
+.login-block-ul{
+	
+}
+.login-block-ul li{
+	font-size: 1.52rem;	
+}
+.login-block-li1{
+	margin-bottom: 0.7rem;
+}
+.login-block-ul .login-block-li2{
+	border:1px solid #e7e7eb;
+	height: 4.2rem;
+	line-height:4.2rem;
+}
+.login-block-li2 input{
+	border:none;
+	margin-left:6rem;
+	width: 23.8rem;
+	outline: none;
+	font-size: 1.2rem;
+}
+.login-block-ul .login-block-line2{
+	border-bottom:none;
+	background:url(../../../../componet/login/images/user.svg) no-repeat 1.8rem 1.18rem;
+	background-size: 1.9rem 1.9rem;
+}
+.login-block-ul .login-block-line3{
+	background:url(../../../../componet/login/images/pwd.svg) no-repeat 1.8rem 1.18rem;
+	background-size: 1.9rem 1.9rem;
+}
+.login-block-chec label{
+	line-height:4rem;
+	font-size: 1.1rem;
+}
+.login-block-ckbox{
+	display: inline-block;
+}
+.login-block-a{
+	font-size: 1.1rem;
+	float:right;
+	margin-top: 1.4rem;
+	color: #576b95;
+}
+.login-block-a:hover{
+	text-decoration: underline;
+}
+.body-block .login-block-button{
+	width:10rem;
+	height: 3rem;
+	margin-top:1rem;
+	text-align:center;
+	line-height:3rem;
+	font-size: 1.3rem;
+	border-radius: 0.4rem;
+	background:#44b549;
+	color:#FFF;
+	cursor: pointer;
+}
+.body-block .login-block-button:hover{
+	background:#37923b;
+}
+.body-block .login-block-span{
+	color:#FF0000;
+	font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

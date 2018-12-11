@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<?php require('meta.html');?>
+<title><?php echo $page['admin']['title'];?></title>
+<?php require('css.html');?>
+</head>
+<body>
+	<?php require('header.html');?>
+	<div class="bodys">
+		<div class="bodys-inner bodys-inner1">
+			<?php require('leftmenu.html');?>
+		</div>
+		<div class="bodys-inner bodys-inner2">			
+			<?php require($temp);?>
+		</div>				
+	</div>
+	<?php require('js.html');?>
+</body>
+</html><!-- 后台框架 -->

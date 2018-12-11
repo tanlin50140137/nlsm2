@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title><?php echo $page['userlogin']['title'];?></title>
+<!-- 加载CSS文件 -->
+<link href="<?php echo apth_url(THEME.'/layer/theme/default/layer.css');?>" rel="stylesheet" type="text/css">
+<link href="<?php echo apth_url(THEME.'/css/style.css');?>" rel="stylesheet" type="text/css">
+<link href="<?php echo apth_url(THEME.'/css/page.css');?>" rel="stylesheet" type="text/css">
+<!-- 加载JS文件 -->
+<script src="<?php echo apth_url(THEME.'/js/jquery-1.11.2.min.js');?>"></script>
+<script src="<?php echo apth_url(THEME.'/layer/layer.js');?>"></script>
+<script src="<?php echo apth_url(THEME.'/js/js.js');?>"></script>
+<script>
+	wx.request = {
+		url:'<?php echo apth_url();?>'
+	};
+</script>
+</head>
+<body>
+	<!-- 加载顶部导航条 -->
+	<div class="navigation">
+			<h1 class="navigation-inner" style="background:url('<?php echo $logo['icon'];?>') no-repeat;background-size: 5.5rem 3.6rem;">
+				<a href="<?php echo $title['userlogin']['link']?>"><?php echo $title['userlogin']['title'];?></a>
+			</h1>
+			<div class="navigation-right">
+				<ul class="navigation-ul">
+	<?php if(!empty($bar['userlogin'])):?>	
+		<?php foreach( $bar['userlogin'] as $v ):?>			
+				<li><a href="<?php echo $v['link']?>"><?php echo $v['title']?></a></li>
+		<?php endforeach;?>		
+	<?php else: ?>	
+				<li>设在route.php定义辅助栏</li>
+	<?php endif;?>						
+				</ul>
+			</div>
+	</div>
+	<?php require($temp);?>	
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* index.html-CSS文件 */
+@CHARSET "UTF-8";
+.body-block{
+ 	margin:4rem 15rem;
+}
+.body-block-h{
+	font-size:1.9rem;
+	font-weight:400;
+	color:#6f6a6a;
+	margin-bottom:1.4rem;
+}
+.body-box{
+	border:1px solid #efecec;
+	background:#FFF;
+	border-radius: 0.5rem;
+}
+.body-box-h{
+	border-bottom:1px solid #efecec;
+	height: 4.5rem;
+    text-align: center;
+    line-height: 4.5rem;
+    font-size: 1.2rem;
+    color:#8a8888;
+}
+.body-block-box{
+	margin:3rem 4rem;
+}
+.body-inner1{
+	border-right:1px solid #efecec;
+	width: 52.3rem;
+	float:left;
+}
+.body-inner2{
+	width: 24.7rem;
+	height:30rem;
+	float:right;
+}
+.body-inner1-t{
+	height:3rem;
+	line-height:3rem;
+	font-size:1.2rem;
+	color:#949494;
+}
+.body-inner1-tab{
+	border-collapse: collapse;
+	width:100%;
+}
+.body-inner1-tab .body-inner1-tab1{
+	width:6rem;
+	height:7rem;
+	font-size:1.25rem;
+}
+.body-inner1-tinp{
+    border: 1px solid #e2e0e0;
+    border-radius: 0.3rem;
+    width:42rem;
+	padding:0.75rem;
+	outline: none;
+}
+.body-inner1-flys{
+	border: 1px solid #e2e0e0;
+    border-radius: 0.3rem;
+    width:30rem;
+	padding:0.75rem;
+	outline: none;
+}
+.body-inner1-img{
+	border:1px solid #fbfafa;
+}
+.body-inner1-tab a{
+	color:#576b95;
+	font-size:1.2rem;
+}
+.body-inner1-tab a:hover{
+	text-decoration: underline;
+}
+.body-inner1-tab .body-inner1-tab2{
+	width:100%;
+	height:7rem;
+	font-size:1.25rem;
+	text-align:center;
+}
+.body-inner1-btn{
+	border:1px solid #83d47a;
+	width:9rem;
+	height:3rem;
+	font-size:1.2rem;
+	background:#83d47a;
+	border-radius: 0.3rem;
+	color: #FFF;
+	cursor: pointer;
+	outline: none;
+}
+.body-inner1-btn:hover{
+	background:#63b759;
+}
+.body-inner2-inner{
+	text-align:center;
+	height:8rem;
+	line-height: 8rem;
+    color: #6b6b69;
+    font-size: 1.2rem;
+}
+.body-inner2-inner a{
+	color:#576b95;
+	font-size: 1.2rem;
+}
+.body-inner2-inner a:hover{
+	text-decoration: underline;
+}
+.fl{
+	border-top:1px solid #e2e0e0;
+	margin-top:3rem;
+}
+.link{
+	float:left;
+	margin-top:2rem;
+}
+.link li{
+	border-left:1px solid #e0dfdf;
+	float:left;
+	padding:0 1rem;
+}
+.link .link-f1{
+	border:none;
+	text-align:left;
+	padding-left:0;
+}
+.link li a{
+	font-size:1.2rem;
+	color:#a5a5a5;
+	display:bloc;
+}
+.link li a:hover{
+	text-decoration: underline;
+}
+.flver{
+	margin-top:2rem;
+	float:right;
+	font-size:1.2rem;
+	color:#a5a5a5;
+}
+.frm_txt{
+	color:red;
+	font-size:1.2rem;
+}
+
+
+
+
+
+
+
+
+
+

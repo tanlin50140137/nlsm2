@@ -1,0 +1,17 @@
+<!-- 加载顶部导航条 -->
+<div class="navigation">
+		<h1 class="navigation-inner" style="background:url('<?php echo $logo['icon'];?>') no-repeat;background-size: 5.5rem 3.6rem;">
+			<a href="<?php echo $title['admin']['link']?>"><?php echo $title['admin']['title'];?></a>
+		</h1>
+		<div class="navigation-right">
+			<ul class="navigation-ul">	
+	<?php if(!empty($bar['admin'])):?>	
+		<?php foreach( $bar['admin'] as $v ):?>			
+				<li><a href="<?php echo $v['link']?>"><?php echo $v['title']?></a></li>
+		<?php endforeach;?>		
+	<?php else: ?>	
+				<li>设在route.php定义辅助栏</li>
+	<?php endif;?>					
+			</ul>
+		</div>
+</div>
