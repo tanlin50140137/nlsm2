@@ -12,6 +12,7 @@ create table nlsm_business(
 	qrcode  text not null comment '商铺收款二维码',
 	shareholder_code text not null comment '邀请股东二维码',
 	from_code  text not null comment '从筹收款二维码',
+	nature state tinyint(10) unsigned not null default 0 comment '状态,0=个体,1=企业',
 	license text not null comment '营业执照',
 	other_info text not null comment '其他信息',
 	publitime int(11) unsigned not null default 0 comment '注册时间',
