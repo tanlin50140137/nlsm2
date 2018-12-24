@@ -22,3 +22,14 @@ create table nlsm_business(
 	key key_tel(tel),
 	key key_email(email)
 )ENGINE=MyISAM DEFAULT CHARSET='utf8';
+
+
+#后台设置
+drop table if exists nlsm_setconfig;
+create table nlsm_setconfig(
+	id int(10) unsigned not null auto_increment primary key comment '主键',	
+	iterm varchar(32) not null default '' comment '配置项-查询依据标识',
+	msginfo text not null comment '配置内容',
+	state tinyint(10) unsigned not null default 0 comment '状态,0=启用,1=停止',
+	key key_iterm(iterm)
+)ENGINE=InnoDB DEFAULT CHARSET='utf8';

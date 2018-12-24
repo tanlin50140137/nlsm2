@@ -99,6 +99,29 @@ function ReadSession()
 	}	
 	return $vals;
 }
+function ReadUnserialize($serialize)
+{
+	if( !empty($serialize) )
+	{
+		$a = unserialize($serialize);
+		return $a;
+	}
+	else
+	{
+		return null;
+	}
+}
+function substr_str($str,$num,$limit='')
+{
+	if( $str != '' )
+	{
+		return mb_substr($str, 0, $num).$limit;
+	}
+	else
+	{
+		return null;
+	}
+}
 /**
  * 页面网络路由
  * */

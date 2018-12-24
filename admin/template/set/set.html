@@ -1,0 +1,82 @@
+<!-- 加载CSS文件 -->
+<link href="<?php echo apth_url(THEME.'/template/set/set.css');?>" rel="stylesheet" type="text/css">
+
+<!-- 标题 -->
+<h1 class="bodys-inner-title box-shadow-border"><img src="<?php echo apth_url(THEME.'/images/set.svg');?>" style="width:32px;height:32px;"/> 设置</h1>
+<!-- 内容模板 -->
+<div class="body-block box-shadow-border">
+	<div class="alipay-hb">
+		<div class="alipay-hb-title">
+		支付宝营销活动送红包<b>（创建红包活动）</b>
+		<div class="componet-btn">
+			<div class="buttons" onclick="opensetConfig('alipayhb')">修改配置</div>
+			<div class="buttons" onclick="openActivities()">现金活动列表</div>
+			<div style="clear:both;"></div>
+		</div>
+		</div>
+		<div class="alipay-hb-item">
+			<table class="wx-table">
+				<tr>
+					<td class="wx-table-td1">开放平台应用(AppID)</td>
+					<td class="wx-table-td2">
+						<p class="wx-table-p1"><?php echo $data['row']['appid']?></p>
+						<p class="wx-table-p2">开放平台创建应用AppID</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="wx-table-td1">alipayrsaPrivateKey<br/>(支付宝公钥)</td>
+					<td class="wx-table-td2">
+						<p class="wx-table-p1"><?php echo substr_str($data['row']['alipayrsaprivatekey'],80,'...')?> &nbsp; <span class="wx-table-sbtn" onclick="openGetKey('支付宝公钥','<?php echo $data['row']['alipayrsaprivatekey'];?>',210);">查看</span></p>
+						<p class="wx-table-p2">请填写支付宝公钥，一行字符串</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="wx-table-td1">rsaPrivateKey<br/>(开发者密钥)</td>
+					<td class="wx-table-td2">
+						<p class="wx-table-p1"><?php echo substr_str($data['row']['rsaprivatekey'],80,'...')?> &nbsp; <span class="wx-table-sbtn" onclick="openGetKey('开发者密钥','<?php echo $data['row']['rsaprivatekey'];?>',550);">查看</span></p>
+						<p class="wx-table-p2">请填写开发者私钥去头去尾去回车，一行字符串</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="wx-table-td1">红包名称</td>
+					<td class="wx-table-td2">
+						<p class="wx-table-p1"><?php echo $data['row']['coupon_name']?></p>
+						<p class="wx-table-p2">红包名称,商户在查询列表、详情看到的名字,同时也会显示在商户付款页面。</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="wx-table-td1">设置红包最大金额</td>
+					<td class="wx-table-td2">
+						<p class="wx-table-p1"><?php echo $data['row']['total_money']?></p>
+						<p class="wx-table-p2">活动发放的现金总金额,最小金额1.00元,最大金额10000000.00元。每个红包的最大金额不允许超过200元,最小金额不得低于0.20元。 </p>
+					</td>
+				</tr>
+				<tr>
+					<td class="wx-table-td1">设置红包数量</td>
+					<td class="wx-table-td2">
+						<p class="wx-table-p1"><?php echo $data['row']['total_num']?></p>
+						<p class="wx-table-p2">红包发放个数，最小1个,最大10000000个。</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="wx-table-td1">红包活动描述</td>
+					<td class="wx-table-td2">
+						<p class="wx-table-p1"><?php echo $data['row']['prize_msg']?></p>
+						<p class="wx-table-p2">活动文案,用户在账单、红包中看到的账单描述、红包描述</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="wx-table-td1">活动结束时间</td>
+					<td class="wx-table-td2">
+						<p class="wx-table-p1"><?php echo $data['row']['end_time']?></p>
+						<p class="wx-table-p2">活动结束时间,必须大于活动开始时间, 基本格式:yyyy-MM-dd HH:mm:ss,活动有效时间最长为6个月，过期后需要创建新的活动。</p>
+					</td>
+				</tr>
+			</table>
+			<hr color="#e7e7eb" size="1">
+		</div>
+	</div>
+</div>
+
+<!-- 加载JS文件 -->
+<script src="<?php echo apth_url(THEME.'/template/set/set.js');?>">

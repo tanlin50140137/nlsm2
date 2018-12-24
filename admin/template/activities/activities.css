@@ -1,0 +1,26 @@
+/* setconfig.html-CSS文件 */
+@CHARSET "UTF-8";
+.body-block{
+ 	margin-top: 0.8rem;
+ 	padding: 4rem 4rem;
+ 	margin-bottom:6rem;
+}
+.setconfig-span{
+	color: #9a9a9a;
+	display: block;
+    line-height: 5rem;
+}
+.alipay-hb-title{
+	position: relative;
+	font-size: 1.2rem;
+    color: #5a5353;
+}
+.alipay-hb-title a{
+	color: #576b95;
+}
+.boxbtn-box a{
+	color: #b7a6a6;
+}
+.boxbtn-box a:hover{
+	color: #403c3c;
+}

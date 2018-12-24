@@ -11,10 +11,10 @@ $route = array(
 	 * */
 	'page' => array(
 		'admin' => array(
-			'title' => '呗尔商家平台'
+			'title' => '呗尔管理后台'
 		),
 		'login' => array(
-			'title' => '呗尔商家平台'
+			'title' => '呗尔管理后台'
 		),
 		'userlogin' => array(
 			'title' => '呗尔商家平台-注册'
@@ -26,15 +26,15 @@ $route = array(
 	'title' => array(
 		'admin' => array(
 			'link' => apth_url(),
-			'title' => '呗尔商家平台 '
+			'title' => '呗尔管理后台'
 		),
 		'login' => array(
 			'link' => apth_url(),
-			'title' => '呗尔商家平台'
+			'title' => '呗尔管理后台'
 		),
 		'userlogin' => array(
 			'link' => apth_url(),
-			'title' => '呗尔商家平台 | 注册'
+			'title' => '呗尔管理后台 | 注册'
 		)
 	),
 	/**
@@ -42,13 +42,14 @@ $route = array(
 	 * */
 	'bar' => array(
 		'admin' => array(
+			/*
 			array(
 				'link' 	=> apth_url(),
 				'title' => '文档'
-			),
+			),*/
 			array(
-				'link' 	=> apth_url(),
-				'title' => '设置'
+				'link' 	=> apth_url('set'),
+				'title' => '<img src="'.apth_url(THEME.'/images/set.svg').'" style="width:24px;height:24px;"/> 设置'
 			),
 			array(
 				'link' 	=> apth_url(),
@@ -66,8 +67,9 @@ $route = array(
 		),
 		'login' => array(
 			array(
-				'link' 	=> apth_url('userlogIn'),
-				'title' => '立即注册'
+				//'link' 	=> apth_url('userlogIn'),
+				'link' 	=> 'javascript:;',
+				'title' => '帮助'
 			)
 		),
 		'userlogin' => array(

@@ -1,0 +1,80 @@
+<!-- 加载CSS文件 -->
+<link href="<?php echo apth_url(THEME.'/template/setconfig/setconfig.css');?>" rel="stylesheet" type="text/css">
+
+<!-- 标题 -->
+<h1 class="bodys-inner-title">
+	配置
+	<span class="setconfig-span"><font color="#44b549">配置</font> / 支付宝营销活动送红包</span>
+</h1>
+<!-- 内容模板 -->
+<div class="body-block box-shadow-border">
+	<div class="alipay-hb">
+		<div class="alipay-hb-title">
+			修改接口配置信息，营销活动送红包（创建现金活动）。参数说明，请阅读<a href="https://docs.open.alipay.com/api_5/alipay.marketing.campaign.cash.create" target="_blank">接入指南</a>。
+		</div>
+		<div class="alipay-hb-item">
+			<form id="frm-setconfig">
+				<table class="wx-table">
+					<tr>
+						<td class="wx-table-td1">开放平台应用(AppID)</td>
+						<td class="wx-table-td2">
+							<p class="wx-table-p1"><input type="text" name="appid" value="<?php echo $data['row']['appid']?>" class="input-box"/></p>
+						</td>
+					</tr>
+					<tr>
+						<td class="wx-table-td1">alipayrsaPrivateKey<br/>(支付宝公钥)</td>
+						<td class="wx-table-td2">
+							<textarea name="alipayrsaprivatekey" class="textarea-box"><?php echo $data['row']['alipayrsaprivatekey']?></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td class="wx-table-td1">rsaPrivateKey<br/>(开发者密钥)</td>
+						<td class="wx-table-td2">
+							<textarea name="rsaprivatekey" class="textarea-box"><?php echo $data['row']['rsaprivatekey']?></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td class="wx-table-td1">红包名称</td>
+						<td class="wx-table-td2">
+							<p class="wx-table-p1"><input type="text" name="coupon_name" value="<?php echo $data['row']['coupon_name']?>" class="input-box"/></p>
+						</td>
+					</tr>
+					<tr>
+						<td class="wx-table-td1">设置红包最大金额</td>
+						<td class="wx-table-td2">
+							<p class="wx-table-p1"><input type="text" name="total_money" value="<?php echo $data['row']['total_money']?>" class="input-box"/></p>
+						</td>
+					</tr>
+					<tr>
+						<td class="wx-table-td1">设置红包数量</td>
+						<td class="wx-table-td2">
+							<p class="wx-table-p1"><input type="text" name="total_num" value="<?php echo $data['row']['total_num']?>" class="input-box"/></p>
+						</td>
+					</tr>
+					<tr>
+						<td class="wx-table-td1">红包活动描述</td>
+						<td class="wx-table-td2">
+							<p class="wx-table-p1"><input type="text" name="prize_msg" value="<?php echo $data['row']['prize_msg']?>" class="input-box"/></p>
+						</td>
+					</tr>
+					<tr>
+						<td class="wx-table-td1">活动结束时间</td>
+						<td class="wx-table-td2">
+							<p class="wx-table-p1"><input type="text" name="end_time" value="<?php echo $data['end_time'];?>" class="input-box"/> <span style="font-size:0.9rem;color:#a9a8a7;">不需要修改，默认活动结束时间 3 个月</span></p>
+						</td>
+					</tr>
+				</table>
+				<input type="hidden" name="iterm" value="<?php echo $data['alipayhb'];?>"/><!-- 配置项 -->
+			</form>
+			<hr color="#e7e7eb" size="1">
+			<div class="boxbtn-box">
+				<input type="button" value="提交" class="sendBtn" onclick="sendBtn();"/>
+				 &nbsp; &nbsp; 
+				<a href="<?php echo apth_url('set');?>">取消</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 加载JS文件 -->
+<script src="<?php echo apth_url(THEME.'/template/setconfig/setconfig.js');?>"></script>

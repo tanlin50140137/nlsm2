@@ -28,3 +28,84 @@ ol,li{
 	zoom:1;
 	clear:both;
 }
+.box-shadow-border{
+	box-shadow:0px 1px 2px #ece6e6;
+	background: #FFFFFF;
+	border-radius: 0.2rem;
+	padding: 0 4rem;
+}
+.wx-table{
+	width: 100%;
+	border-collapse: collapse; 
+}
+.wx-table td{
+	font-size:1.25rem;
+	color:#353535;
+}
+.wx-table p{
+	font-size:1.25rem;
+	color:#353535;
+}
+.wx-table-td1{
+	text-align:left;
+	width: 17rem;
+	height: 7rem;
+}
+.wx-table-p1{
+	line-height: 2.4rem;
+	width: 80rem;
+	word-wrap:break-word;
+}
+.wx-table .wx-table-p2{
+	color:#9a9a9a;
+}
+.input-box{
+	border: 1px solid #e7e7eb;
+    padding: 0.5rem;
+    width: 60%;
+    border-radius: 0.2rem;
+    outline: none;
+    font-size: 1.2rem;
+}
+.textarea-box{
+	border: 1px solid #e7e7eb;
+    padding: 0.5rem;
+    width: 60%;
+    border-radius: 0.2rem;
+    outline: none;
+    font-size: 1.2rem;
+}
+.boxbtn-box{
+	text-align:center;
+}
+.sendBtn{
+	border: 1px solid #44b549;
+    padding: 0.5rem 4rem;
+    margin-top: 2rem;
+    background: #44b549;
+    border-radius: 0.2rem;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    outline: none;
+    cursor:pointer;
+}
+.sendBtn:hover{
+	background: #3ca540;
+}
+.wx-table-sbtn{
+	border: 1px solid #1aad19;
+    padding: 0 0.5rem;
+    border-radius: 0.2rem;
+    background: #1aad19;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+

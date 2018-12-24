@@ -1,0 +1,39 @@
+/* set.html-CSS文件 */
+@CHARSET "UTF-8";
+.body-block{
+ 	margin-top: 0.8rem;
+ 	padding: 4rem 4rem;
+ 	margin-bottom:6rem;
+}
+.bodys-inner-title{
+	background: #FFFFFF;
+    height: 5rem;
+    line-height: 5rem;   
+}
+.alipay-hb-title{
+	position: relative;
+	font-size: 1.6rem;
+    color: #5a5353;
+}
+.alipay-hb-item{
+	margin-top:1rem;
+}
+.componet-btn{
+	position: absolute;
+    top: 0;
+    right: 0;
+}
+.buttons{
+	border: 1px solid #e4e8eb;
+    float: left;
+    margin-left: 1rem;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+.buttons:hover{
+	background:#e7e8e7;
+}
