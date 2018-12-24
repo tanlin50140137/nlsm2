@@ -192,6 +192,7 @@ function EntryFile()
 	require ('./'.THEME.'/component.php');
 	require ('./'.THEME.'/controller.php');
 	require ('./'.THEME.'/interface.php');
+	require ('./'.THEME.'/external.php');
 	require ('./'.THEME.'/function.php');
 	
 	if(	$ACT != null && function_exists( $ACT ) )

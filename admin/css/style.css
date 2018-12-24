@@ -100,11 +100,45 @@ ol,li{
     color: #FFFFFF;
     cursor: pointer;
 }
-
-
-
-
-
+.tableBox{
+	border:1px solid #e1e1e1;
+}
+.tableBox th{
+	line-height: 4rem;	
+}
+.tableBox td{
+	border:1px solid #e1e1e1;
+	line-height: 4rem;
+	text-align:center;
+}
+.tableBox td a:hover{
+	color:red;
+}
+.tableBox .floor-tdtable{
+	height: 5rem;
+}
+.input-getgo{
+	border: 1px solid #e1e1e1;
+    width: 3rem;
+    border-radius: 0.3rem;
+    padding: 0.1rem 0.5rem;
+    outline: none;	
+}
+.input-btngo{
+	border: 1px solid #e1e1e1;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    color: #5d5a56;	
+}
+.create_hb{
+	border: 1px solid #1aad19;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    background: #1aad19;
+    color: #f6f9f8;
+    cursor: pointer;
+}
 
 
 

@@ -1,5 +1,5 @@
 <!-- 加载CSS文件 -->
-<link href="<?php echo apth_url(THEME.'/template/setconfig/setconfig.css');?>" rel="stylesheet" type="text/css">
+<link href="<?php echo apth_url(THEME.'/template/activities/activities.css');?>" rel="stylesheet" type="text/css">
 
 <!-- 标题 -->
 <h1 class="bodys-inner-title">
@@ -9,72 +9,49 @@
 <!-- 内容模板 -->
 <div class="body-block box-shadow-border">
 	<div class="alipay-hb">
-		<div class="alipay-hb-title">
-			修改接口配置信息，营销活动送红包（创建现金活动）。参数说明，请阅读<a href="https://docs.open.alipay.com/api_5/alipay.marketing.campaign.cash.create" target="_blank">接入指南</a>。
+		<div class="alipay-hb-title" style="margin-bottom:0.8rem;">
+			<input type="button" onclick="createHB()" value="创建现金红包" class="create_hb"/>
 		</div>
 		<div class="alipay-hb-item">
-			<form id="frm-setconfig">
-				<table class="wx-table">
-					<tr>
-						<td class="wx-table-td1">开放平台应用(AppID)</td>
-						<td class="wx-table-td2">
-							<p class="wx-table-p1"><input type="text" name="appid" value="<?php echo $data['row']['appid']?>" class="input-box"/></p>
-						</td>
-					</tr>
-					<tr>
-						<td class="wx-table-td1">alipayrsaPrivateKey<br/>(支付宝公钥)</td>
-						<td class="wx-table-td2">
-							<textarea name="alipayrsaprivatekey" class="textarea-box"><?php echo $data['row']['alipayrsaprivatekey']?></textarea>
-						</td>
-					</tr>
-					<tr>
-						<td class="wx-table-td1">rsaPrivateKey<br/>(开发者密钥)</td>
-						<td class="wx-table-td2">
-							<textarea name="rsaprivatekey" class="textarea-box"><?php echo $data['row']['rsaprivatekey']?></textarea>
-						</td>
-					</tr>
-					<tr>
-						<td class="wx-table-td1">红包名称</td>
-						<td class="wx-table-td2">
-							<p class="wx-table-p1"><input type="text" name="coupon_name" value="<?php echo $data['row']['coupon_name']?>" class="input-box"/></p>
-						</td>
-					</tr>
-					<tr>
-						<td class="wx-table-td1">设置红包最大金额</td>
-						<td class="wx-table-td2">
-							<p class="wx-table-p1"><input type="text" name="total_money" value="<?php echo $data['row']['total_money']?>" class="input-box"/></p>
-						</td>
-					</tr>
-					<tr>
-						<td class="wx-table-td1">设置红包数量</td>
-						<td class="wx-table-td2">
-							<p class="wx-table-p1"><input type="text" name="total_num" value="<?php echo $data['row']['total_num']?>" class="input-box"/></p>
-						</td>
-					</tr>
-					<tr>
-						<td class="wx-table-td1">红包活动描述</td>
-						<td class="wx-table-td2">
-							<p class="wx-table-p1"><input type="text" name="prize_msg" value="<?php echo $data['row']['prize_msg']?>" class="input-box"/></p>
-						</td>
-					</tr>
-					<tr>
-						<td class="wx-table-td1">活动结束时间</td>
-						<td class="wx-table-td2">
-							<p class="wx-table-p1"><input type="text" name="end_time" value="<?php echo $data['end_time'];?>" class="input-box"/> <span style="font-size:0.9rem;color:#a9a8a7;">不需要修改，默认活动结束时间 3 个月</span></p>
-						</td>
-					</tr>
-				</table>
-				<input type="hidden" name="iterm" value="<?php echo $data['alipayhb'];?>"/><!-- 配置项 -->
-			</form>
-			<hr color="#e7e7eb" size="1">
-			<div class="boxbtn-box">
-				<input type="button" value="提交" class="sendBtn" onclick="sendBtn();"/>
-				 &nbsp; &nbsp; 
-				<a href="<?php echo apth_url('set');?>">取消</a>
-			</div>
+			<table class="wx-table tableBox">
+				<tr>
+					<th>活动名称</th>
+					<th>现金活动号</th>
+					<th>现金活流水号</th>
+					<th>添动状态</th>
+					<th>操作</th>
+				</tr>
+	<?php if( !empty($data['rows']['list']) ): ?>
+		<?php foreach($data['rows']['list'] as $k=>$v ): ?>			
+				<tr>
+					<td><?php echo $v->coupon_name;?></td>
+					<td><?php echo $v->crowd_no;?></td>
+					<td><?php echo $v->origin_crowd_no;?></td>
+					<td><?php echo GetGatewayState($v->camp_status);?></td>
+					<td>
+						&nbsp;
+						<a href="javascript:;" onclick="openDetails('<?php echo $v->crowd_no;?>')">详情</a>
+						&nbsp;
+						<a href="https://auth.alipay.com?goto=https://hi.alipay.com/query/openCashCrowdPay.htm?crowdNo=<?php echo $v->crowd_no;?>" target="_blank">充值</a> 
+						&nbsp;
+						<a href="javascript:;" onclick="openChanges('<?php echo $v->crowd_no;?>','<?php echo $data['rows']['page_index'];?>')">更改</a>
+						&nbsp;
+					</td>
+				</tr>
+		<?php endforeach; ?>		
+	<?php endif; ?>
+				<tr>
+					<td colspan="5" class="floor-tdtable" style="font-size:1.2rem;">
+						<?php echo $data['rows']['page_index'];?>/<?php echo ceil($data['rows']['total_size']/$data['rows']['page_size']);?>页 
+						<a href="<?php echo apth_url('activities/'.($data['rows']['page_index']-1));?>">上一页</a> <a href="<?php echo apth_url('activities/'.($data['rows']['page_index']+1));?>">下一页</a> &nbsp;
+						<input type="text" id="getGo" class="input-getgo"/> <input type="button" value="GO" class="input-btngo" onclick="getGo()"/>
+						共 <?php echo $data['rows']['total_size'];?> 条
+					</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 </div>
 
 <!-- 加载JS文件 -->
-<script src="<?php echo apth_url(THEME.'/template/setconfig/setconfig.js');?>"></script>
+<script src="<?php echo apth_url(THEME.'/template/activities/activities.js');?>"></script>

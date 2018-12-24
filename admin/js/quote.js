@@ -17,3 +17,10 @@ wx.ActionEvents({
 
 	}
 });
+
+$(".tableBox tr").filter(":even").css("background","#f8f9fb").end().filter(":odd").css("background","#FFFFFF");
+$(".tableBox tr").hover(function(){
+	$(this).css({"background":"#FFFFDD"});
+},function(){
+	$(".tableBox tr").filter(":even").css("background","#f8f9fb").end().filter(":odd").css("background","#FFFFFF");
+});
