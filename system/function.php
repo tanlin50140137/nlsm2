@@ -123,6 +123,18 @@ function substr_str($str,$num,$limit='')
 	}
 }
 /**
+ * 密码加密
+ * @param string    $password 密码
+ * @return string
+ */
+function password( $password ) 
+{
+  $string = base64_encode(sha1(md5($password)));
+  $string = substr($string, 0, 6);
+  $password = md5(hash("sha256", $password . $string));
+  return $password;
+}
+/**
  * 页面网络路由
  * */
 function apth_url($str=null)

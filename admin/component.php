@@ -5,7 +5,6 @@
 function logIn()
 {
 	//$rows = db()->select('*')->from(PRE.'apack')->where(array('id'=>1))->get()->array_row();
-	
 	view_componet( strtolower(__FUNCTION__), 'index/index' );
 }
 #提交数据-登录
